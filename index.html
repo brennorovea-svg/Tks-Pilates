@@ -312,6 +312,18 @@
     .neon-tag.is-on .neon-tag__plate, .neon-tag__word span.is-blink, .neon-tag__word.is-blink { animation: none; }
     .neon-tag:hover .neon-tag__sign, .neon-tag:active .neon-tag__sign { transform: none; }
   }
+
+  /* Logo v3 da Neon Scripts: E ao contrário e o O vira um olho amendoado, íris na cor de SCRIPTS */
+  .neon-tag .espelho { display: inline-block; transform: scaleX(-1); }
+  .neon-tag .o-olho { display: inline-flex; align-items: center; width: .86em; height: 1em; margin: 0 .02em; }
+  .neon-tag .olho-svg { display: block; width: 100%; height: .86em; overflow: visible; filter: drop-shadow(0 0 3px var(--ns-glow)) drop-shadow(0 0 12px var(--ns-glow)) drop-shadow(0 0 30px var(--ns-glow)); }
+  .neon-tag .olho-svg .tubo { fill: none; stroke: var(--ns-tube); stroke-width: 13; stroke-linejoin: round; }
+  .neon-tag .olho-svg .friso { fill: none; stroke: #1a0b33; stroke-width: 2.4; stroke-linejoin: round; opacity: .75; }
+  .neon-tag .olho-svg .iris { fill: none; stroke: var(--ns-tubeB); stroke-width: 5.5; filter: drop-shadow(0 0 4px var(--ns-glowB)); }
+  .neon-tag .olho-svg .pupila { fill: var(--ns-tubeB); filter: drop-shadow(0 0 6px var(--ns-glowB)); }
+  .neon-tag .olho-svg .palpebra { transform-box: fill-box; transform-origin: center; transition: transform 140ms var(--ns-ease); }
+  .neon-tag .o-olho.fecha .palpebra { transform: scaleY(.06); transition-duration: 110ms; }
+  @media (prefers-reduced-motion: reduce) { .neon-tag .olho-svg .palpebra { transition: none; } }
 </style>
 </head>
 <body>
@@ -446,7 +458,7 @@
       <span class="neon-tag__sign" aria-hidden="true">
         <span class="neon-tag__plate">
           <span class="neon-tag__screws"><i></i><i></i><i></i><i></i></span>
-          <span class="neon-tag__word"><span>N</span><span>E</span><span>O</span><span>N</span></span>
+          <span class="neon-tag__word"><span>N</span><span class="espelho">E</span><span class="o-olho"><svg class="olho-svg" viewBox="0 0 100 100" aria-hidden="true"><g class="palpebra"><path class="tubo" d="M4 50 Q50 -2 96 50 Q50 102 4 50 Z"/><path class="friso" d="M4 50 Q50 -2 96 50 Q50 102 4 50 Z"/><g class="olhar"><circle class="iris" cx="50" cy="50" r="15"/><circle class="pupila" cx="50" cy="50" r="6.5"/></g></g></svg></span><span>N</span></span>
           <span class="neon-tag__word neon-tag__word--sub"><span>S</span><span>C</span><span>R</span><span>I</span><span>P</span><span>T</span><span>S</span></span>
         </span>
       </span>
@@ -713,15 +725,16 @@
 
 </script>
 <script>
-// Tag da Neon Scripts: a placa liga uma vez quando aparece e depois, a cada
-// 2,6 a 6 s, pisca uma letra ou a placa toda, e às vezes rosa e azul trocam.
+// Tag da Neon Scripts (logo v3): a placa liga uma vez quando aparece e depois, a cada
+// 2,6 a 6 s, pisca uma letra, o olho ou a placa toda, e às vezes rosa e azul trocam.
 // Só roda com a placa na tela e a aba visível.
 const neonTag = document.querySelector('.neon-tag');
 const semMovimentoNeon = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (neonTag && !semMovimentoNeon && 'IntersectionObserver' in window) {
   const palavras = neonTag.querySelectorAll('.neon-tag__word');
-  const letras = neonTag.querySelectorAll('.neon-tag__word span');
+  const letras = neonTag.querySelectorAll('.neon-tag__word > span:not(.o-olho)');
+  const olho = neonTag.querySelector('.o-olho');
   let timer = null;
 
   const piscar = (el) => {
@@ -733,7 +746,8 @@ if (neonTag && !semMovimentoNeon && 'IntersectionObserver' in window) {
   const tick = () => {
     if (!document.hidden) {
       const r = Math.random();
-      if (r < 0.45) piscar(letras[Math.floor(Math.random() * letras.length)]);
+      if (r < 0.3) piscar(letras[Math.floor(Math.random() * letras.length)]);
+      else if (r < 0.5) { olho.classList.add('fecha'); setTimeout(() => olho.classList.remove('fecha'), 150); }
       else if (r < 0.7) palavras.forEach(piscar);
       else { palavras.forEach(piscar); neonTag.classList.toggle('is-azul'); }
     }
