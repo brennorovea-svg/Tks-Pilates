@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TKS Pilates · Pilates em aparelhos na Penha e na Vila Guilhermina</title>
+<meta name="description" content="Pilates em aparelhos com turmas pequenas na Penha e na Vila Guilhermina, em São Paulo. Agende sua aula avaliação gratuita pelo WhatsApp.">
+<meta name="theme-color" content="#111111">
+<meta property="og:title" content="TKS Pilates">
+<meta property="og:description" content="A aula é em grupo. O olhar é individual. Agende sua aula avaliação gratuita.">
+<meta property="og:image" content="img/u2-salao.jpg">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,800&display=swap">
+<style>
+  :root {
+    --azul: #12AFFF; --preto: #111111; --royal: #2450C8; --nevoa: #EEF4FA; --grafite: #5B6470; --branco: #FFFFFF;
+    --f-titulo: "Quicksand", "Nunito Sans", sans-serif;
+    --f-texto: "Nunito Sans", system-ui, sans-serif;
+    --mola: cubic-bezier(.34,1.4,.64,1);
+    --suave: cubic-bezier(.2,.8,.2,1);
+    --bg: #111111; --fg: #FFFFFF; --muted: #A9B1BC; --olho: #12AFFF; --card: #1B1D20; --line: rgba(255,255,255,.12); --line-forte: rgba(255,255,255,.35);
+    --hover: rgba(18,175,255,.16); --tag: rgba(18,175,255,.14); --tag-fg: #7FD3FF;
+    --caixa: #1C1E21; --caixa-fg: #FFFFFF; --caixa-muted: #A9B1BC; --caixa-pilula: #2A2D31; --caixa-linha: rgba(255,255,255,.2); --zap-fundo: #0B141A;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--f-texto); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; }
+  img { display: block; }
+  :focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; border-radius: 10px; }
+  .wrap { width: 100%; max-width: 1200px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  @media (min-width: 768px) { .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
+  h1, h2, h3 { font-family: var(--f-titulo); font-weight: 700; margin: 0; text-wrap: balance; }
+  h2 { font-size: clamp(1.9rem, 3.8vw, 3rem); line-height: 1.08; letter-spacing: -.01em; }
+  p { margin: 0; }
+  .eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--olho); }
+  .muted { color: var(--muted); }
+  .slogan { font-family: var(--f-texto); font-weight: 800; font-style: italic; }
+  .pilares { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+  .pilares i { width: 8px; height: 8px; border-radius: 50%; background: var(--azul); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 26px; border-radius: 999px; background: var(--azul); color: var(--preto); font-weight: 800; text-decoration: none; border: 0; font: inherit; font-weight: 800; cursor: pointer; transition: transform .2s var(--mola), box-shadow .2s, background-color .2s; }
+  .btn:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 26px rgba(18,175,255,.32); }
+  .btn:active { transform: scale(.97); }
+  .btn svg { width: 22px; height: 22px; flex: none; }
+  .btn.linha { background: transparent; color: var(--fg); box-shadow: inset 0 0 0 1.5px var(--line-forte); }
+  .btn.linha:hover { box-shadow: inset 0 0 0 1.5px var(--azul); }
+  .btn.escuro { background: var(--preto); color: var(--branco); }
+  .btn.escuro:hover { box-shadow: 0 10px 26px rgba(17,17,17,.25); }
+  .acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+  .topo { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 20px; }
+  .topo .logo { height: 54px; width: auto; }
+  .nav { display: none; align-items: center; gap: 4px; font-weight: 700; font-size: 15px; }
+  .nav a:not(.btn) { text-decoration: none; padding: 10px 14px; border-radius: 999px; transition: background-color .18s; }
+  .nav a:not(.btn):hover { background: var(--hover); }
+  .nav .btn { padding: 11px 20px; margin-left: 8px; }
+  @media (min-width: 960px) { .nav { display: flex; } }
+  .secao { padding-block: clamp(72px, 9vw, 112px); }
+  .faixa-azul, .faixa-nevoa { --bg: #EEF4FA; --card: #FFFFFF; --tag: #EEF4FA; background: var(--bg); }
+  .cabeca { display: grid; gap: 12px; margin-bottom: 40px; max-width: 760px; }
+
+  /* ---------- professoras ---------- */
+  .rostos { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px; }
+  .rosto { display: grid; justify-items: center; }
+  .rosto img { width: min(100%, 200px); aspect-ratio: 1; height: auto; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 5px var(--bg), 0 0 0 8px var(--azul); transition: transform .6s var(--mola); }
+  .rosto:hover img { transform: scale(1.05) rotate(-2deg); }
+  .js .rv:not(.in) .rosto img { transform: scale(.6); }
+  .rosto:nth-child(2) img { transition-delay: .06s } .rosto:nth-child(3) img { transition-delay: .12s } .rosto:nth-child(4) img { transition-delay: .18s }
+  .nomes { list-style: none; margin: 36px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .nomes li { background: var(--card); border-radius: 20px; padding: 16px 20px; display: grid; gap: 2px; }
+  .nomes b { font-family: var(--f-titulo); font-size: 19px; }
+  .nomes span { color: var(--muted); font-size: 14px; }
+  .fotos-grupo { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 16px; }
+  .fotos-grupo img { width: 100%; height: 420px; object-fit: cover; border-radius: 28px; }
+
+  /* ---------- depoimentos ---------- */
+  .depos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .depo { margin: 0; background: var(--card); border-radius: 28px; padding: 30px; display: grid; gap: 18px; align-content: space-between; transition: transform .25s var(--mola); }
+  .depo:hover { transform: translateY(-4px); }
+  .depo p { font-size: 18px; line-height: 1.55; }
+  .depo footer { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--muted); }
+  .depo footer b { color: var(--fg); display: block; font-size: 15px; }
+  .depo .ini { width: 42px; height: 42px; border-radius: 50%; background: var(--azul); color: var(--preto); display: grid; place-items: center; font-weight: 800; flex: none; }
+  .estrelas { color: #F5B400; letter-spacing: 2px; font-size: 15px; }
+
+  /* ---------- unidades ---------- */
+  .unids { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+  .unid { background: var(--card); border-radius: 32px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+  .unid .foto { height: 280px; overflow: hidden; }
+  .unid .foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--suave); }
+  .unid:hover .foto img { transform: scale(1.05); }
+  .unid .corpo { padding: 28px; display: grid; gap: 12px; }
+  .unid h3 { font-size: 30px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags span { background: var(--tag); color: var(--tag-fg); font-size: 13px; font-weight: 800; padding: 6px 12px; border-radius: 999px; }
+
+  /* ---------- monte sua mensagem ---------- */
+  .monta-grade { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
+  .monta-txt { flex: 1 1 340px; min-width: 0; display: grid; gap: 16px; }
+  .monta-caixa { flex: 1.4 1 480px; min-width: 0; background: var(--caixa); color: var(--caixa-fg); border-radius: 32px; padding: clamp(22px, 3vw, 36px); display: grid; gap: 20px; box-shadow: 0 24px 60px rgba(17,17,17,.10); }
+  .grupo { display: grid; gap: 10px; }
+  .rot { font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--caixa-muted); }
+  .pilulas { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pilulas button { font: inherit; font-size: 15px; font-weight: 700; padding: 10px 16px; border-radius: 999px; border: 0; cursor: pointer; background: var(--caixa-pilula); color: var(--caixa-fg); transition: transform .2s var(--mola), background-color .18s, color .18s; }
+  .pilulas button:hover { transform: translateY(-1px); }
+  .pilulas button[aria-checked="true"] { background: var(--azul); color: var(--preto); }
+  .monta-caixa input { font: inherit; font-size: 16px; padding: 13px 16px; border-radius: 14px; border: 1.5px solid var(--caixa-linha); background: transparent; color: var(--caixa-fg); width: 100%; }
+  .monta-caixa input:focus { outline: none; border-color: var(--azul); }
+  .previa { background: var(--zap-fundo); border-radius: 20px; padding: 18px; }
+  .balao { display: block; background: #D9FDD3; color: #111B21; border-radius: 14px 14px 4px 14px; padding: 12px 14px; margin-left: auto; max-width: 92%; font-size: 15px; line-height: 1.5; box-shadow: 0 1px 1px rgba(0,0,0,.08); animation: balao .35s var(--mola); }
+  @keyframes balao { from { transform: scale(.96); opacity: .4; } to { transform: none; opacity: 1; } }
+  .enviar { background: #25D366; color: #0B2E17; font-size: 18px; padding: 18px 26px; width: 100%; }
+  .enviar:hover { box-shadow: 0 10px 26px rgba(37,211,102,.35); }
+  .mini { font-size: 13px; color: var(--caixa-muted); text-align: center; }
+
+  /* ---------- dúvidas ---------- */
+  .duv { display: flex; flex-wrap: wrap; gap: 48px; }
+  .duv h2 { flex: 1 1 300px; min-width: 0; }
+  .lista { flex: 2 1 520px; min-width: 0; }
+  .item { border-top: 1px solid var(--line); } .item:last-child { border-bottom: 1px solid var(--line); }
+  .item button { all: unset; box-sizing: border-box; width: 100%; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; font-weight: 800; font-size: 18px; }
+  .item button:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; border-radius: 8px; }
+  .item button b { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--tag); color: var(--tag-fg); display: grid; place-items: center; font-size: 20px; transition: transform .3s var(--mola), background-color .2s; }
+  .item[data-aberto="true"] button b { transform: rotate(45deg); background: var(--azul); color: var(--preto); }
+  .resp { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s var(--suave); }
+  .item[data-aberto="true"] .resp { grid-template-rows: 1fr; }
+  .resp > div { overflow: hidden; } .resp p { padding-bottom: 22px; color: var(--muted); }
+
+  /* ---------- rodapé e botão fixo ---------- */
+  .rodape { padding-block: 40px 96px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+  .zap { position: fixed; z-index: 30; right: calc(env(safe-area-inset-right, 0px) + 16px); bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px 14px 16px; border-radius: 999px; background: #25D366; color: #0B2E17; font-weight: 800; font-size: 15px; text-decoration: none; box-shadow: 0 10px 28px rgba(0,0,0,.22); animation: zap-entra .6s var(--mola) 1.4s both; transition: transform .18s; }
+  .zap:hover { transform: translateY(-2px) scale(1.03); }
+  .zap svg { width: 24px; height: 24px; flex: none; }
+  @keyframes zap-entra { from { opacity: 0; transform: translateY(20px) scale(.9); } to { opacity: 1; transform: none; } }
+
+  .js .rv { opacity: 0; transform: translateY(34px); transition: opacity .8s var(--suave), transform .9s var(--mola); }
+  .js .rv.in { opacity: 1; transform: none; }
+  .js .rv.d1 { transition-delay: .1s } .js .rv.d2 { transition-delay: .2s }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .js .rv, .js .rv:not(.in) .rosto img { opacity: 1; transform: none; }
+  }
+
+  .faixa-escura { --bg: #17191C; --card: #22252A; background: var(--bg); }
+  .heroi { position: relative; isolation: isolate; overflow: hidden; min-height: min(100svh, 900px); display: flex; flex-direction: column; background: #111111; }
+  .heroi canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; display: block; }
+  .heroi .nav .btn { background: var(--azul); color: var(--preto); }
+  .texto { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 24px; padding-block: 12px 20px; }
+  .texto > * { max-width: 520px; }
+  .heroi h1 { font-size: clamp(2.7rem, 5.6vw, 4.9rem); line-height: 1; letter-spacing: -.025em; }
+  .heroi h1 .linha { display: block; }
+  .troca { position: relative; display: block; height: 1.12em; overflow: hidden; color: var(--azul); }
+  .troca span { position: absolute; left: 0; top: 0; white-space: nowrap; transform: translateY(105%); opacity: 0; transition: transform .7s var(--suave), opacity .7s; }
+  .troca span.ativa { transform: none; opacity: 1; }
+  .troca span.saiu { transform: translateY(-105%); opacity: 0; }
+  .apoio { font-size: clamp(1.02rem, 1.5vw, 1.18rem); color: #C9D0D8; max-width: 46ch; }
+  .capitulos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding-block: 8px 30px; max-width: 560px; }
+  .cap { display: grid; gap: 8px; font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #7D8590; transition: color .3s; }
+  .cap.ativo { color: #fff; }
+  .cap i { display: block; height: 3px; border-radius: 2px; background: #2A2E35; overflow: hidden; }
+  .cap i b { display: block; height: 100%; width: 0; background: var(--azul); }
+  .entra { animation: entra .9s var(--mola) both; }
+  .entra.d1 { animation-delay: .1s } .entra.d2 { animation-delay: .22s } .entra.d3 { animation-delay: .36s } .entra.d4 { animation-delay: .5s }
+  @keyframes entra { from { opacity: 0; transform: translateY(28px); } }
+  @media (max-width: 899px) { .texto { justify-content: flex-end; padding-top: 330px; } .cap { font-size: 10px; letter-spacing: .08em; } }
+
+  .pilares-faixa { background: var(--azul); color: var(--preto); }
+  .pilares-faixa .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; padding-block: 64px; }
+  .pilar { display: grid; gap: 8px; }
+  .pilar h2 { font-size: clamp(1.7rem, 2.8vw, 2.4rem); }
+  .pilar p { font-weight: 600; max-width: 34ch; }
+
+  .fotos { padding-block: clamp(72px, 9vw, 112px) 24px; overflow: hidden; }
+  .trilho { display: flex; gap: 16px; width: max-content; animation: trilho 42s linear infinite; }
+  .trilho img { width: 300px; height: 380px; object-fit: cover; border-radius: 28px; flex: none; }
+  .fotos:hover .trilho { animation-play-state: paused; }
+  @keyframes trilho { to { transform: translateX(calc(-50% - 8px)); } }
+
+  .frase { border-block: 1px solid var(--line); }
+  .frase p { padding-block: 88px; font-family: var(--f-titulo); font-weight: 600; font-size: clamp(1.7rem, 4vw, 3.1rem); line-height: 1.15; max-width: 22ch; text-wrap: balance; }
+  .frase p span { color: var(--azul); }
+  @media (prefers-reduced-motion: reduce) { .troca span { position: static; transform: none; opacity: 1; } .troca span:not(.ativa) { display: none; } }
+
+</style>
+</head>
+<body>
+<section class="heroi" aria-label="Primeira tela">
+  <canvas id="filme" aria-hidden="true"></canvas>
+  <header class="wrap topo">
+    <img class="logo" src="img/logo-tks-negativo.png" alt="TKS Pilates">
+    <nav class="nav" aria-label="Principal">
+      <a href="#unidades">Unidades</a>
+      <a href="#professoras">Professoras</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a class="btn" href="#mensagem">Aula avaliação gratuita</a>
+    </nav>
+  </header>
+  <div class="wrap texto">
+    <p class="eyebrow entra d1">Pilates em aparelhos · Penha e Vila Guilhermina</p>
+    <h1 aria-label="O movimento transforma.">
+      <span class="linha entra d2">O movimento</span>
+      <span class="troca entra d3" id="troca" aria-hidden="true"><span>gera força.</span><span>traz equilíbrio.</span><span>dá autonomia.</span><span class="ativa">transforma.</span></span>
+    </h1>
+    <p class="apoio entra d3">Turmas pequenas no Reformer, no Cadillac e na Chair, com uma professora olhando para você o tempo todo.</p>
+    <div class="acoes entra d4"><a class="btn" data-wa href="https://wa.me/5511992171881?text=Ol%C3%A1%2C%20Taiz%21%20Quero%20agendar%20minha%20aula%20avalia%C3%A7%C3%A3o%20gratuita%20no%20TKS%20Pilates." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></svg>Agendar aula avaliação gratuita</a><a class="btn linha" href="#mensagem">Montar minha mensagem</a></div>
+  </div>
+  <div class="wrap"><div class="capitulos entra d4" aria-hidden="true">
+    <div class="cap"><span>Força</span><i><b></b></i></div><div class="cap"><span>Equilíbrio</span><i><b></b></i></div><div class="cap"><span>Autonomia</span><i><b></b></i></div>
+  </div></div>
+</section>
+<section class="pilares-faixa" id="metodo">
+  <div class="wrap">
+    <div class="pilar rv"><h2>Força</h2><p>Centro do corpo e postura trabalhados no Reformer, no Cadillac e na Chair.</p></div>
+    <div class="pilar rv d1"><h2>Equilíbrio</h2><p>Mais estabilidade e consciência corporal para se mover com segurança.</p></div>
+    <div class="pilar rv d2"><h2>Autonomia</h2><p>Um corpo que acompanha melhor o que a sua rotina pede.</p></div>
+  </div>
+</section>
+<section class="fotos" aria-label="Fotos dos estúdios">
+  <div class="wrap"><div class="cabeca rv"><p class="eyebrow">Os estúdios</p><h2>A aula é em grupo. O olhar é individual.</h2><p class="muted">Turmas de até 5 alunos na Penha e até 4 na Vila Guilhermina.</p></div></div>
+  <div class="trilho"><img src="img/u2-salao.jpg" alt="Salão com Reformers de madeira na Penha" loading="lazy"><img src="img/u1-sala.jpg" alt="Aparelhos de aço na Vila Guilhermina" loading="lazy"><img src="img/u2-cadillac.jpg" alt="Cadillac e acessórios na parede" loading="lazy"><img src="img/u1-parede.jpg" alt="Parede azul com o logo TKS" loading="lazy"><img src="img/u2-ampulheta.jpg" alt="Ampulheta azul na recepção" loading="lazy"><img src="img/u1-recepcao.jpg" alt="Recepção com a frase na parede" loading="lazy"><img src="img/u2-salao.jpg" alt="" aria-hidden="true" loading="lazy"><img src="img/u1-sala.jpg" alt="" aria-hidden="true" loading="lazy"><img src="img/u2-cadillac.jpg" alt="" aria-hidden="true" loading="lazy"><img src="img/u1-parede.jpg" alt="" aria-hidden="true" loading="lazy"><img src="img/u2-ampulheta.jpg" alt="" aria-hidden="true" loading="lazy"><img src="img/u1-recepcao.jpg" alt="" aria-hidden="true" loading="lazy"></div>
+</section>
+<section class="secao" id="mensagem">
+  <div class="wrap monta-grade">
+    <div class="monta-txt rv">
+      <p class="eyebrow">Mensagem pronta para o WhatsApp</p>
+      <h2>Sua primeira aula começa com uma mensagem.</h2>
+      <p class="muted">Toque nas opções e o texto já sai pronto. É só enviar: a Taiz responde, tira suas dúvidas, mostra os horários e os planos e agenda a sua aula avaliação gratuita.</p>
+      <div class="pilares"><span>Força</span><i></i><span>Equilíbrio</span><i></i><span>Autonomia</span></div>
+    </div>
+    <div class="monta-caixa rv d1">
+      <div class="grupo"><span class="rot" id="r-unidade">Qual unidade?</span><div class="pilulas" role="radiogroup" aria-labelledby="r-unidade" data-campo="unidade"><button type="button" role="radio" aria-checked="true" data-valor="Penha">Penha</button><button type="button" role="radio" aria-checked="false" data-valor="Vila Guilhermina">Vila Guilhermina</button><button type="button" role="radio" aria-checked="false" data-valor="">Ainda não sei</button></div></div>
+      <div class="grupo"><span class="rot" id="r-periodo">Melhor horário</span><div class="pilulas" role="radiogroup" aria-labelledby="r-periodo" data-campo="periodo"><button type="button" role="radio" aria-checked="true" data-valor="de manhã">Manhã</button><button type="button" role="radio" aria-checked="false" data-valor="à tarde">Tarde</button><button type="button" role="radio" aria-checked="false" data-valor="à noite">Noite</button></div></div>
+      <div class="grupo"><span class="rot" id="r-motivo">O que te traz ao Pilates?</span><div class="pilulas" role="radiogroup" aria-labelledby="r-motivo" data-campo="motivo"><button type="button" role="radio" aria-checked="false" data-valor="aliviar dores e desconfortos">Dores ou desconfortos</button><button type="button" role="radio" aria-checked="true" data-valor="melhorar a postura">Postura</button><button type="button" role="radio" aria-checked="false" data-valor="ganhar mobilidade e flexibilidade">Mobilidade</button><button type="button" role="radio" aria-checked="false" data-valor="uma indicação médica">Indicação médica</button><button type="button" role="radio" aria-checked="false" data-valor="voltar a me exercitar">Voltar a me exercitar</button></div></div>
+      <div class="grupo"><label class="rot" for="nome">Seu nome (opcional)</label><input id="nome" type="text" autocomplete="given-name" placeholder="Como você gosta de ser chamada?"></div>
+      <div class="previa" aria-live="polite"><span class="balao" id="previa">Olá, Taiz! Quero agendar minha aula avaliação gratuita no TKS Pilates.</span></div>
+      <a class="btn enviar" id="enviar" href="https://wa.me/5511992171881?text=Ol%C3%A1%2C%20Taiz%21%20Quero%20agendar%20minha%20aula%20avalia%C3%A7%C3%A3o%20gratuita%20no%20TKS%20Pilates." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></svg>Enviar no WhatsApp</a>
+      <p class="mini">Abre o WhatsApp (11) 99217-1881 com a mensagem pronta.</p>
+    </div>
+  </div>
+</section>
+<section class="secao faixa-escura" id="professoras">
+  <div class="wrap">
+    <div class="cabeca rv"><p class="eyebrow">Professoras</p><h2>Quem cuida de você</h2><p class="muted">Educação Física e Fisioterapia lado a lado, com a Taiz à frente desde 2018.</p></div>
+    <div class="rostos rv">
+      <figure class="rosto" style="margin:0"><img src="img/rosto-1.jpg" alt="Professora do TKS"></figure>
+      <figure class="rosto" style="margin:0"><img src="img/rosto-2.jpg" alt="Professora do TKS"></figure>
+      <figure class="rosto" style="margin:0"><img src="img/rosto-3.jpg" alt="Professora do TKS"></figure>
+      <figure class="rosto" style="margin:0"><img src="img/rosto-4.jpg" alt="Professora do TKS"></figure>
+    </div>
+    <ul class="nomes rv d1">
+      <li><b>Taiz Macieira</b><span>Fundadora · Educação Física (2008) e Pilates (2018)</span></li>
+      <li><b>Anne</b><span>Educação Física</span></li>
+      <li><b>Isabela</b><span>Fisioterapia</span></li>
+      <li><b>Rosane</b><span>Fisioterapia</span></li>
+    </ul>
+    <div class="fotos-grupo rv"><img src="img/equipe-vg.jpg" alt="Professoras na parede azul da Vila Guilhermina"><img src="img/equipe-penha.jpg" alt="Taiz e professoras na unidade Penha"></div>
+  </div>
+</section>
+<section class="secao" id="depoimentos">
+  <div class="wrap">
+    <div class="cabeca rv"><p class="eyebrow">Depoimentos</p><h2>Quem faz, conta</h2></div>
+    <div class="depos">
+      <blockquote class="depo rv"><span class="estrelas" aria-label="5 estrelas">★★★★★</span><p>“Adoro a TKS, as professoras Taiz e Anne são maravilhosas, exploram bastante a nossa prática e é um ambiente agradável. Além do valor do Pilates ser justo.”</p><footer><span class="ini" aria-hidden="true">C</span><span><b>Claudia G.</b>aluna · Google</span></footer></blockquote>
+      <blockquote class="depo rv d1"><p>“Muito obrigado pela manhã maravilhosa que você organizou. Gostei muito. As histórias compartilhadas, conhecimento, mimos e o carinho de toda sua família!!! Gratidão!!!”</p><footer><span class="ini" aria-hidden="true">Z</span><span><b>Zuleika</b>aluna · WhatsApp</span></footer></blockquote>
+      <blockquote class="depo rv d2"><p>“Cada vez mais apaixonada pelo seu profissional e dedicação. Parabéns!”</p><footer><span class="ini" aria-hidden="true">C</span><span><b>Cíntia R.</b>aluna · WhatsApp</span></footer></blockquote>
+    </div>
+  </div>
+</section>
+<section class="secao faixa-escura" id="unidades">
+  <div class="wrap">
+    <div class="cabeca rv"><p class="eyebrow">Unidades</p><h2>Duas unidades, o mesmo cuidado</h2><p class="muted">Escolha a que combina com a sua rotina. As duas ficam na Zona Leste de São Paulo.</p></div>
+    <div class="unids">
+      <article class="unid rv">
+        <div class="foto"><img src="img/u2-salao.jpg" alt="Unidade Penha, salão com aparelhos de madeira"></div>
+        <div class="corpo">
+          <p class="eyebrow">Desde 2022</p>
+          <h3>Penha</h3>
+          <p>Av. Amador Bueno da Veiga, 4027 · Vila Costa Melo · CEP 03653-000</p>
+          <p class="muted">Fica dentro da academia: o acesso é pela recepção e pelo corredor da piscina, com escadas até o estúdio.</p>
+          <div class="tags"><span>Turmas de até 5 alunos</span><span>Reformer</span><span>Cadillac</span><span>Barrel</span></div>
+          <div class="acoes"><button class="btn" type="button" data-unidade="Penha">Agendar na Penha</button><a class="btn linha" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Amador%20Bueno%20da%20Veiga%2C%204027%2C%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Como chegar</a></div>
+        </div>
+      </article>
+      <article class="unid rv d1">
+        <div class="foto"><img src="img/u1-parede.jpg" alt="Unidade Vila Guilhermina, parede azul com o logo"></div>
+        <div class="corpo">
+          <p class="eyebrow">Desde maio de 2026</p>
+          <h3>Vila Guilhermina</h3>
+          <p>Rua Jordânia, 265, casa 2 · Vila Guilhermina · CEP 03543-000</p>
+          <p class="muted">Unidade térrea, com acesso direto pela rua.</p>
+          <div class="tags"><span>Turmas de até 4 alunos</span><span>Chair</span><span>Ladder Barrel</span><span>Reformer</span></div>
+          <div class="acoes"><button class="btn" type="button" data-unidade="Vila Guilhermina">Agendar na Vila Guilhermina</button><a class="btn linha" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Jord%C3%A2nia%2C%20265%2C%20Vila%20Guilhermina%2C%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Como chegar</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="frase"><div class="wrap"><p class="rv">Cuidar do corpo é um processo. <span>Aqui começa o seu.</span></p></div></section>
+<section class="secao" id="duvidas">
+  <div class="wrap duv">
+    <h2 class="rv">Dúvidas de quem está começando</h2>
+    <div class="lista rv d1">
+      <div class="item" data-aberto="true"><button type="button" aria-expanded="true" id="q0">Nunca fiz Pilates. Posso começar?<b aria-hidden="true">+</b></button><div class="resp"><div><p>Pode sim. A aula avaliação gratuita serve justamente para a professora conhecer você, sua história e seus objetivos, e adaptar os exercícios.</p></div></div></div>
+      <div class="item" data-aberto="false"><button type="button" aria-expanded="false" id="q1">Como são as turmas?<b aria-hidden="true">+</b></button><div class="resp"><div><p>Até 5 alunos na Penha e até 4 na Vila Guilhermina. O horário é compartilhado e o atendimento é individualizado: a aula é em grupo, o olhar é individual.</p></div></div></div>
+      <div class="item" data-aberto="false"><button type="button" aria-expanded="false" id="q2">Quanto custa?<b aria-hidden="true">+</b></button><div class="resp"><div><p>Os planos são apresentados na conversa pelo WhatsApp, para você escolher o que faz sentido para a sua rotina, e não só pelo preço.</p></div></div></div>
+      <div class="item" data-aberto="false"><button type="button" aria-expanded="false" id="q3">Vim por indicação médica. Posso fazer?<b aria-hidden="true">+</b></button><div class="resp"><div><p>Sim, muitos alunos chegam assim. Na aula avaliação a professora entende sua condição e adapta a aula para você.</p></div></div></div>
+      
+    </div>
+  </div>
+</section>
+<footer class="wrap rodape"><span>TKS Pilates · Penha e Vila Guilhermina · São Paulo</span><span>WhatsApp (11) 99217-1881 · @tkspilates</span></footer>
+<a class="zap" id="zap" href="https://wa.me/5511992171881?text=Ol%C3%A1%2C%20Taiz%21%20Quero%20agendar%20minha%20aula%20avalia%C3%A7%C3%A3o%20gratuita%20no%20TKS%20Pilates." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></svg><span>Aula avaliação gratuita</span></a>
+<script>
+(() => {
+  const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduz) {
+    document.documentElement.classList.add('js');
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+    document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  }
+  document.querySelectorAll('.item button').forEach(b => b.addEventListener('click', () => {
+    const it = b.closest('.item'), ab = it.dataset.aberto !== 'true'; it.dataset.aberto = String(ab); b.setAttribute('aria-expanded', String(ab));
+  }));
+
+  // ---------- mensagem pronta ----------
+  const TEL = '5511992171881';
+  const estado = { unidade: 'Penha', periodo: 'de manhã', motivo: 'melhorar a postura' };
+  const nome = document.getElementById('nome'), previa = document.getElementById('previa');
+  const enviar = document.getElementById('enviar'), zap = document.getElementById('zap');
+  function texto() {
+    let t = 'Olá, Taiz!';
+    const n = (nome && nome.value.trim()) || '';
+    if (n) t += ` Meu nome é ${n}.`;
+    t += ' Quero agendar minha aula avaliação gratuita';
+    t += estado.unidade ? ` na unidade ${estado.unidade}.` : '. Ainda não sei qual unidade fica melhor para mim.';
+    if (estado.periodo) t += ` Prefiro horários ${estado.periodo}.`;
+    if (estado.motivo) t += ` O que me traz ao Pilates é ${estado.motivo}.`;
+    return t;
+  }
+  function atualizar(anima) {
+    const t = texto(), url = `https://wa.me/${TEL}?text=${encodeURIComponent(t)}`;
+    if (previa) { previa.textContent = t; if (anima) { previa.style.animation = 'none'; void previa.offsetWidth; previa.style.animation = ''; } }
+    if (enviar) enviar.href = url; if (zap) zap.href = url;
+    document.querySelectorAll('[data-wa]').forEach(a => a.href = url);
+  }
+  document.querySelectorAll('.pilulas').forEach(g => g.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    g.querySelectorAll('button').forEach(x => x.setAttribute('aria-checked', String(x === b)));
+    estado[g.dataset.campo] = b.dataset.valor; atualizar(true);
+  }));
+  if (nome) nome.addEventListener('input', () => atualizar(false));
+  window.tksUnidade = (u) => {
+    estado.unidade = u;
+    document.querySelectorAll('.pilulas[data-campo="unidade"] button').forEach(x => x.setAttribute('aria-checked', String(x.dataset.valor === u)));
+    atualizar(true);
+    document.getElementById('mensagem')?.scrollIntoView({ behavior: reduz ? 'auto' : 'smooth', block: 'start' });
+  };
+  document.querySelectorAll('[data-unidade]').forEach(b => b.addEventListener('click', () => window.tksUnidade(b.dataset.unidade)));
+  atualizar(false);
+  window.tksReduz = reduz;
+})();
+
+// ---------- o filme: uma aluna no Reformer, em três capítulos ----------
+// Força: footwork com os dois pés na barra. Equilíbrio: braços nas alças com as pernas em mesa.
+// Autonomia: prances, alternando os calcanhares com o carrinho aberto. Tudo desenhado em unidades (u).
+(() => {
+  const reduz = window.tksReduz;
+  const cv = document.getElementById('filme'); if (!cv) return;
+  const ctx = cv.getContext('2d');
+  const T = 15, FASES = [0, 5, 10];
+  const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
+  const lerp = (a, b, k) => a + (b - a) * k;
+  const ease = v => v < .5 ? 4 * v * v * v : 1 - Math.pow(-2 * v + 2, 3) / 2;
+  const onda = v => .5 - .5 * Math.cos(v * Math.PI * 2);           // 0 → 1 → 0
+  const P = (x, y) => ({ x, y });
+  const mix = (A, B, k) => P(lerp(A.x, B.x, k), lerp(A.y, B.y, k));
+  let W = 0, H = 0, dpr = 1, t = reduz ? 2.4 : 0, ultimo = 0, vis = true, mx = 0, my = 0, pmx = 0, pmy = 0;
+
+  // medidas do aparelho (em u). y = 0 é o topo do trilho, o chão fica em +9.
+  const L = 64, CW = 21, CHAO = 9, TOPO = -3.4, CORPO = -5.1;
+  const PE = P(L - 4.6, -12);                         // onde os pés apoiam na barra
+  const COXA = 11, CANELA = 11, BRACO = 6, ANTEBRACO = 5.6;
+  const POLIA = P(1.6, -16.4);
+  const carro = p => lerp(30.8, 20.4, p);                // posição do carrinho: p = 0 fechado, 1 aberto
+
+  const grao = document.createElement('canvas'); grao.width = grao.height = 180;
+  (() => { const g = grao.getContext('2d'), im = g.createImageData(180, 180);
+    for (let i = 0; i < im.data.length; i += 4) { const v = Math.random() * 255; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 16; }
+    g.putImageData(im, 0, 0); })();
+
+  // joelho ou cotovelo por cinemática inversa (dir = -1 dobra para cima)
+  function junta(A, B, a, b, dir) {
+    const dx = B.x - A.x, dy = B.y - A.y; let d = Math.hypot(dx, dy); d = clamp(d, Math.abs(a - b) + .01, a + b - .01);
+    const k = Math.acos(clamp((a * a + d * d - b * b) / (2 * a * d), -1, 1)), ang = Math.atan2(dy, dx) + dir * k;
+    return P(A.x + a * Math.cos(ang), A.y + a * Math.sin(ang));
+  }
+  function perna(quadril, pe, dobra = -1) {
+    const joelho = junta(quadril, pe, COXA, CANELA, dobra);
+    const ang = Math.atan2(pe.y - joelho.y, pe.x - joelho.x);          // garante o comprimento da canela
+    const tornozelo = P(joelho.x + CANELA * Math.cos(ang), joelho.y + CANELA * Math.sin(ang));
+    return { quadril, joelho, tornozelo };
+  }
+
+  // pose de cada capítulo em um instante local lt
+  function pose(fase, lt) {
+    let p, legs, maos, alcas = false, resp;
+    if (fase === 0) {                                   // footwork: duas pressões lentas
+      const s = ease(onda(lt / 2.5)); p = s; resp = Math.sin(lt / 2.5 * Math.PI * 2 - Math.PI / 2);
+      const cx = carro(p), q = P(cx + 18.8, CORPO);
+      legs = [perna(q, PE), perna(P(q.x + .5, q.y - .35), P(PE.x + .4, PE.y - .3))];
+      legs.forEach(g => g.dedo = P(g.tornozelo.x + 2.2, g.tornozelo.y - 1.2));
+      maos = null;
+    } else if (fase === 1) {                            // braços nas alças, pernas em mesa
+      const s = ease(onda(lt / 2.5)); p = .12 + .42 * s; resp = Math.sin(lt / 2.5 * Math.PI * 2 - Math.PI / 2); alcas = true;
+      const cx = carro(p), q = P(cx + 18.8, CORPO), osc = Math.sin(lt * 2.1) * .05;
+      legs = [0, 1].map(i => { const qq = P(q.x + i * .5, q.y - i * .35), a1 = -Math.PI / 2 + .12 + osc, j = P(qq.x + COXA * Math.cos(a1), qq.y + COXA * Math.sin(a1));
+        const a2 = -.06 - osc, tz = P(j.x + CANELA * Math.cos(a2), j.y + CANELA * Math.sin(a2)); return { quadril: qq, joelho: j, tornozelo: tz, dedo: P(tz.x + 2, tz.y - .9) }; });
+      const th = lerp(-1.95, -.12, s);
+      maos = th;
+    } else {                                            // prances: carrinho aberto, calcanhares alternando
+      p = .78 + .05 * Math.sin(lt * Math.PI * 1.6); resp = Math.sin(lt * 1.3);
+      const cx = carro(p), q = P(cx + 18.8, CORPO);
+      legs = [0, 1].map(i => { const sobe = Math.max(0, Math.sin(lt * Math.PI * 1.6 + i * Math.PI)) * 1.0;
+        const pe = P(PE.x + i * .4 - sobe * .9, PE.y - i * .3 - sobe * 1.5); const g = perna(P(q.x + i * .5, q.y - i * .35), pe); g.dedo = P(PE.x + 1.6 + i * .4, PE.y - 1.6 - i * .3 + sobe * .2); return g; });
+      maos = null;
+    }
+    const cx = carro(p);
+    const ombro = P(cx + 4.8, CORPO - .2), cabeca = P(cx + 1.4, CORPO - .9);
+    let bracos;
+    if (maos === null) {                                // braços ao longo do corpo
+      bracos = [0, 1].map(i => { const o = P(ombro.x + i * .4, ombro.y - i * .3); const m = P(o.x + 11.4, o.y + .8); return { o, c: junta(o, m, BRACO, ANTEBRACO, 1), m }; });
+    } else {
+      bracos = [0, 1].map(i => { const o = P(ombro.x + i * .4, ombro.y - i * .3); const m = P(o.x + 11.2 * Math.cos(maos), o.y + 11.2 * Math.sin(maos)); return { o, c: junta(o, m, BRACO, ANTEBRACO, 1), m }; });
+    }
+    return { p, cx, legs, bracos, ombro, cabeca, alcas, resp };
+  }
+  function misturar(A, B, k) {
+    const o = { p: lerp(A.p, B.p, k), cx: lerp(A.cx, B.cx, k), alcas: k > .5 ? B.alcas : A.alcas, resp: lerp(A.resp, B.resp, k),
+      ombro: mix(A.ombro, B.ombro, k), cabeca: mix(A.cabeca, B.cabeca, k) };
+    o.legs = A.legs.map((g, i) => ({ quadril: mix(g.quadril, B.legs[i].quadril, k), joelho: mix(g.joelho, B.legs[i].joelho, k), tornozelo: mix(g.tornozelo, B.legs[i].tornozelo, k), dedo: mix(g.dedo, B.legs[i].dedo, k) }));
+    o.bracos = A.bracos.map((b, i) => ({ o: mix(b.o, B.bracos[i].o, k), c: mix(b.c, B.bracos[i].c, k), m: mix(b.m, B.bracos[i].m, k) }));
+    return o;
+  }
+  function poseEm(t) {
+    const fase = t < 5 ? 0 : t < 10 ? 1 : 2, lt = t - FASES[fase], TR = .9;
+    const atual = pose(fase, lt);
+    if (lt >= TR) return { ...atual, fase };
+    const ant = (fase + 2) % 3;
+    return { ...misturar(pose(ant, 5), atual, ease(lt / TR)), fase };
+  }
+
+  // ---------- desenho ----------
+  function linha(pts, w, cor) { ctx.strokeStyle = cor; ctx.lineWidth = w; ctx.beginPath(); pts.forEach((q, i) => i ? ctx.lineTo(q.x, q.y) : ctx.moveTo(q.x, q.y)); ctx.stroke(); }
+  function mola(x0, x1, y, cor, voltas, amp) {
+    const n = 90; ctx.lineWidth = .26;
+    for (let lado = 0; lado < 2; lado++) {               // primeiro a parte de trás, depois a da frente
+      ctx.strokeStyle = lado ? cor : 'rgba(255,255,255,.16)'; ctx.beginPath(); let des = false;
+      for (let i = 0; i <= n; i++) {
+        const k = i / n, a = k * voltas * Math.PI * 2, x = lerp(x0 + .9, x1 - .9, k), yy = y + Math.sin(a) * amp, frente = Math.cos(a) > 0;
+        if (frente === !!lado) { des ? ctx.lineTo(x, yy) : ctx.moveTo(x, yy); des = true; } else des = false;
+      }
+      ctx.stroke();
+    }
+    ctx.strokeStyle = 'rgba(220,226,232,.9)'; ctx.lineWidth = .3;
+    ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x0 + .9, y); ctx.moveTo(x1 - .9, y); ctx.lineTo(x1, y); ctx.stroke();
+  }
+  function madeira(x, y, w, h, r) {
+    const g = ctx.createLinearGradient(0, y, 0, y + h); g.addColorStop(0, '#D8AE7E'); g.addColorStop(.55, '#B0804F'); g.addColorStop(1, '#7E5532');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.roundRect(x, y, w, h, r); ctx.fill();
+    ctx.save(); ctx.clip(); ctx.strokeStyle = 'rgba(70,40,18,.22)'; ctx.lineWidth = .08;
+    for (let i = 0; i < 7; i++) { const yy = y + h * (.15 + i * .12); ctx.beginPath(); ctx.moveTo(x, yy); for (let xx = x; xx <= x + w; xx += 2) ctx.lineTo(xx, yy + Math.sin(xx * .35 + i * 1.7) * .12); ctx.stroke(); }
+    ctx.restore();
+  }
+  function cena(po, t) {
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    const cx = po.cx;
+    // pés e estrutura de madeira
+    for (const x of [2.2, L - 2.6]) madeira(x - .9, 2, 1.8, CHAO - 2, .5);
+    madeira(-.4, .1, L + .8, 2.4, .8);
+    // trilho de aço com brilho
+    const gt = ctx.createLinearGradient(0, -.3, 0, .4); gt.addColorStop(0, '#F2F5F8'); gt.addColorStop(1, '#7C858F');
+    ctx.fillStyle = gt; ctx.beginPath(); ctx.roundRect(0, -.35, L, .7, .35); ctx.fill();
+    // poste das polias
+    ctx.fillStyle = '#C9D0D8'; ctx.beginPath(); ctx.roundRect(POLIA.x - .45, POLIA.y, .9, -POLIA.y, .4); ctx.fill();
+    const giro = cx * .9;
+    ctx.save(); ctx.translate(POLIA.x, POLIA.y); ctx.rotate(giro); ctx.fillStyle = '#2A2D31'; ctx.beginPath(); ctx.arc(0, 0, 1, 0, 7); ctx.fill();
+    ctx.strokeStyle = '#8E98A3'; ctx.lineWidth = .18; ctx.beginPath(); ctx.moveTo(-.7, 0); ctx.lineTo(.7, 0); ctx.stroke(); ctx.restore();
+    // barra de molas e molas: esticam conforme o carrinho abre
+    ctx.fillStyle = '#C9D0D8'; ctx.beginPath(); ctx.roundRect(L - 9.4, -3.2, .8, 3, .3); ctx.fill();
+    const cores = ['#12AFFF', '#2450C8', '#F4F6F8'];
+    cores.forEach((c, i) => mola(cx + CW - .4, L - 9, -1.1 - i * .62, c, lerp(9, 9, 0), lerp(.34, .2, po.p)));
+    // barra de pé (tubo de aço com espuma)
+    ctx.strokeStyle = '#D5DBE1'; ctx.lineWidth = .7;
+    ctx.beginPath(); ctx.moveTo(L - 2.4, .2); ctx.lineTo(PE.x + .4, PE.y + .6); ctx.stroke();
+    ctx.strokeStyle = 'rgba(255,255,255,.35)'; ctx.lineWidth = .2; ctx.beginPath(); ctx.moveTo(L - 2.6, -.2); ctx.lineTo(PE.x + .2, PE.y + .5); ctx.stroke();
+    ctx.fillStyle = '#1B1E22'; ctx.beginPath(); ctx.arc(PE.x + .3, PE.y + .4, 1.05, 0, 7); ctx.fill();
+    ctx.strokeStyle = '#3A3F46'; ctx.lineWidth = .15; ctx.stroke();
+    // carrinho: rodas, base, estofado, apoio de cabeça e ombreiras
+    for (const x of [cx + 2.8, cx + CW - 2.8]) { ctx.save(); ctx.translate(x, -.7); ctx.rotate(-cx * 1.4); ctx.fillStyle = '#2A2D31'; ctx.beginPath(); ctx.arc(0, 0, .75, 0, 7); ctx.fill(); ctx.strokeStyle = '#9AA3AD'; ctx.lineWidth = .14; ctx.beginPath(); ctx.moveTo(-.5, 0); ctx.lineTo(.5, 0); ctx.stroke(); ctx.restore(); }
+    madeira(cx, -1.5, CW, .9, .3);
+    const ge = ctx.createLinearGradient(0, TOPO, 0, -1.5); ge.addColorStop(0, '#30343A'); ge.addColorStop(1, '#16181B');
+    ctx.fillStyle = ge; ctx.beginPath(); ctx.roundRect(cx + .2, TOPO, CW - .4, 1.95, .7); ctx.fill();
+    ctx.strokeStyle = 'rgba(255,255,255,.14)'; ctx.lineWidth = .1; ctx.setLineDash([.35, .3]); ctx.beginPath(); ctx.moveTo(cx + 1, TOPO + .35); ctx.lineTo(cx + CW - 1, TOPO + .35); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = '#23262B'; ctx.beginPath(); ctx.roundRect(cx - .6, TOPO - 1.1, 3.6, 1.5, .6); ctx.fill();
+    // corda: tensa até a mão nas alças, solta no gancho nos outros capítulos
+    ctx.strokeStyle = 'rgba(236,240,244,.55)'; ctx.lineWidth = .16;
+    const mao = po.bracos[0].m;
+    if (po.alcas) { ctx.beginPath(); ctx.moveTo(POLIA.x + .9, POLIA.y + .3); ctx.lineTo(mao.x, mao.y); ctx.stroke(); }
+    else { ctx.beginPath(); ctx.moveTo(POLIA.x + .9, POLIA.y + .3); ctx.quadraticCurveTo(cx - 4, -4, cx + .2, TOPO - .2); ctx.stroke(); }
+
+    // a aluna: top branco, legging azul royal, contorno escuro para ler sobre o círculo
+    const pele = '#EDDCCB', roupa = '#F4F6F8', leg = '#2450C8', longe = .55;
+    const [pn, pf] = po.legs, [bn, bf] = po.bracos;
+    const membro = (pts, w, cor, a = 1) => { ctx.globalAlpha = a; linha(pts, w + .55, '#111111'); linha(pts, w, cor); ctx.globalAlpha = 1; };
+    membro([bf.o, bf.c, bf.m], 1.2, pele, longe);
+    membro([pf.quadril, pf.joelho, pf.tornozelo], 2.05, leg, longe); membro([pf.tornozelo, pf.dedo], .9, pele, longe);
+    // tronco: o peito sobe na inspiração
+    const q = po.legs[0].quadril, o = po.ombro, peito = .35 + .3 * po.resp, meio = P((o.x + q.x) / 2, o.y - peito - .5);
+    for (const [w, c] of [[3.65, '#111111'], [3.1, roupa]]) { ctx.strokeStyle = c; ctx.lineWidth = w; ctx.beginPath(); ctx.moveTo(o.x, o.y); ctx.quadraticCurveTo(meio.x, meio.y, q.x, q.y); ctx.stroke(); }
+    ctx.strokeStyle = leg; ctx.lineWidth = 2.6; ctx.beginPath(); ctx.moveTo(q.x - 2.2, q.y - .3); ctx.lineTo(q.x, q.y); ctx.stroke();
+    ctx.strokeStyle = 'rgba(18,175,255,.9)'; ctx.lineWidth = .3; ctx.beginPath(); ctx.moveTo(o.x + 1, o.y - 1.25); ctx.quadraticCurveTo(meio.x, meio.y - 1.25, q.x - 2.4, q.y - 1.3); ctx.stroke();
+    // pescoço e cabeça com coque
+    membro([o, P(po.cabeca.x + 1.3, po.cabeca.y + .2)], 1.15, pele);
+    ctx.fillStyle = '#111111'; ctx.beginPath(); ctx.arc(po.cabeca.x, po.cabeca.y, 2.3, 0, 7); ctx.fill();
+    ctx.fillStyle = pele; ctx.beginPath(); ctx.arc(po.cabeca.x, po.cabeca.y, 2.02, 0, 7); ctx.fill();
+    ctx.fillStyle = '#2B1D16'; ctx.beginPath(); ctx.arc(po.cabeca.x - .2, po.cabeca.y - .25, 2.05, Math.PI * .9, Math.PI * 2.08); ctx.fill();
+    ctx.beginPath(); ctx.arc(po.cabeca.x - 2.1, po.cabeca.y - .7, .95, 0, 7); ctx.fill();
+    // perna e braço da frente
+    membro([pn.quadril, pn.joelho, pn.tornozelo], 2.3, leg); membro([pn.tornozelo, pn.dedo], 1, pele);
+    membro([bn.o, bn.c, bn.m], 1.3, pele);
+    if (po.alcas) { ctx.strokeStyle = '#111111'; ctx.lineWidth = .55; ctx.beginPath(); ctx.arc(bn.m.x, bn.m.y, 1, 0, 7); ctx.stroke(); }
+  }
+
+  function quadro(t) {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = '#111111'; ctx.fillRect(0, 0, W, H);
+    pmx += (mx - pmx) * .05; pmy += (my - pmy) * .05;
+    const larga = W >= 900;
+    const u = larga ? Math.min(W * .0076, H * .012) : Math.min(W * .0138, 7.2);
+    const ox = larga ? W - (L + 4) * u - W * .03 + Math.sin(t * .21) * u * .6 : (W - L * u) / 2;
+    const oy = larga ? H * .6 : 228;
+    const po = poseEm(t);
+
+    // o círculo azul do logo, atrás do aparelho, respirando junto com a aluna
+    const R = larga ? Math.min(H * .38, W * .27) : W * .46;
+    const ccx = (larga ? ox + L * u * .66 : W * .78) - pmx * 18, ccy = (larga ? oy - 9 * u : 150) - pmy * 12;
+    const gc = ctx.createRadialGradient(ccx - R * .3, ccy - R * .35, R * .1, ccx, ccy, R);
+    gc.addColorStop(0, '#4CC3FF'); gc.addColorStop(1, '#0E95DC');
+    ctx.fillStyle = gc; ctx.beginPath(); ctx.arc(ccx, ccy, R * (1 + .015 * po.resp), 0, 7); ctx.fill();
+
+    // chão, sombra e reflexo
+    const chao = oy + CHAO * u;
+    const gs = ctx.createRadialGradient(ox + L * u / 2, chao, 0, ox + L * u / 2, chao, L * u * .55);
+    gs.addColorStop(0, 'rgba(0,0,0,.55)'); gs.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.save(); ctx.translate(0, chao); ctx.scale(1, .12); ctx.translate(0, -chao); ctx.fillStyle = gs; ctx.fillRect(0, chao - L * u, W, L * u * 2); ctx.restore();
+    ctx.save(); ctx.globalAlpha = .13; ctx.translate(ox, chao); ctx.scale(u, -u); ctx.translate(0, -CHAO); cena(po, t); ctx.restore();
+    const gr = ctx.createLinearGradient(0, chao, 0, chao + 22 * u); gr.addColorStop(0, 'rgba(17,17,17,.2)'); gr.addColorStop(1, '#111111');
+    ctx.fillStyle = gr; ctx.fillRect(0, chao, W, H - chao);
+    ctx.strokeStyle = 'rgba(255,255,255,.12)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(0, chao); ctx.lineTo(W, chao); ctx.stroke();
+
+    ctx.save(); ctx.translate(ox, oy); ctx.scale(u, u); cena(po, t); ctx.restore();
+
+    // respiração: "expira" quando empurra, "inspira" quando volta
+    if (po.fase !== 2) {
+      const lt = t - FASES[po.fase], s = Math.sin(lt / 2.5 * Math.PI * 2), forca = clamp(Math.abs(s) * 1.6 - .3);
+      const rot = s > 0 ? 'expira' : 'inspira', x = ox + (po.cx + 9) * u, y = oy - 19 * u;
+      ctx.globalAlpha = forca * (larga ? 1 : .9); ctx.font = `800 ${Math.max(11, u * 1.25)}px "Nunito Sans", sans-serif`;
+      const w = ctx.measureText(rot).width + u * 2.4;
+      ctx.fillStyle = 'rgba(17,17,17,.75)'; ctx.beginPath(); ctx.roundRect(x - w / 2, y - u * 1.4, w, u * 2.6, u * 1.3); ctx.fill();
+      ctx.strokeStyle = 'rgba(18,175,255,.6)'; ctx.lineWidth = 1; ctx.stroke();
+      ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(rot, x, y);
+      ctx.globalAlpha = 1;
+    }
+
+    // véu para o texto e grão de filme
+    const g = larga ? ctx.createLinearGradient(0, 0, W * .6, 0) : ctx.createLinearGradient(0, H, 0, 300);
+    g.addColorStop(0, 'rgba(17,17,17,.97)'); g.addColorStop(.62, 'rgba(17,17,17,.72)'); g.addColorStop(1, 'rgba(17,17,17,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    if (!reduz) { ctx.save(); ctx.globalCompositeOperation = 'overlay'; ctx.fillStyle = ctx.createPattern(grao, 'repeat');
+      ctx.translate(-((Math.random() * 180) | 0), -((Math.random() * 180) | 0)); ctx.fillRect(0, 0, W + 180, H + 180); ctx.restore(); }
+  }
+
+  // capítulos e a palavra que troca no título
+  const caps = [...document.querySelectorAll('.cap')], palavras = [...document.querySelectorAll('#troca span')];
+  let atual = 3;
+  function trocar(i) { if (i === atual) return; const velho = palavras[atual]; velho.classList.remove('ativa'); velho.classList.add('saiu');
+    setTimeout(() => velho.classList.remove('saiu'), 700); palavras[i].classList.add('ativa'); atual = i; }
+  function marcar(t) {
+    caps.forEach((c, i) => { const a = FASES[i], z = FASES[i + 1] ?? T; c.querySelector('b').style.width = clamp((t - a) / (z - a)) * 100 + '%'; c.classList.toggle('ativo', t >= a && t < z); });
+    trocar(t < 1.2 ? 3 : t < 5 ? 0 : t < 10 ? 1 : t < 13.8 ? 2 : 3);
+  }
+  function medir() { const r = cv.getBoundingClientRect(); dpr = Math.min(2, devicePixelRatio || 1); W = r.width; H = r.height;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); quadro(t); }
+  new ResizeObserver(medir).observe(cv); medir();
+  if (reduz) { caps.forEach(c => c.querySelector('b').style.width = '100%'); return; }
+  new IntersectionObserver(es => vis = es[0].isIntersecting).observe(cv);
+  addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; }, { passive: true });
+  (function loop(ms) { if (ultimo) t = (t + Math.min(.05, (ms - ultimo) / 1000)) % T; ultimo = ms; if (vis) { quadro(t); marcar(t); } requestAnimationFrame(loop); })(performance.now());
+})();
+
+</script>
+</body>
+</html>
